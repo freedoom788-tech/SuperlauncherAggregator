@@ -1,0 +1,23 @@
+import requests
+
+# URL dell'API di Epic Games (sostituisci con l'endpoint corretto)
+url = "https://api.epicgames.com/YOUR_ENDPOINT"
+
+# Intestazioni della richiesta (se necessarie)
+headers = {
+    "Authorization": "Bearer YOUR_ACCESS_TOKEN",
+    "Content-Type": "application/json"
+}
+
+# Corpo della richiesta, se necessario
+data = {
+    "bAuto": True,
+    "requested_api_version": -1,
+    "request_id": -1
+}
+
+# Esegui la richiesta POST
+response = requests.post(url, headers=headers, json=data)
+
+# Stampa la risposta
+print(response.json())
